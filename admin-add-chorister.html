@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin/Add Chorister</title>
+  <link rel="shortcut icon" href="dlso-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+  <header class="header">
+    <img width="40" class="logo" src="dlso-logo.jpg" alt="DLSO logo">
+    <nav>
+      <a href="home.html">Home</a> |
+      <a href="join-the-choir.html">Join The Choir</a> |
+      <a href="attendance.html">Attendance</a> |
+      <a href="rules.html">Rules</a> |
+      <a href="contact.html">Contact Leaders</a>
+    </nav>
+    <button class="menu-btn" type="button">&#9776;</button>
+  </header>
+  
+  <nav class="menu">
+    <a href="home.html">
+      <img width="40" src="home-icon.png" alt="icon">
+      Home</a>
+    <a href="join-the-choir.html">
+      <img width="40" src="join-choir-icon.png" alt="icon">
+      Join The Choir</a>
+    <a href="attendance.html">
+      <img width="40" src="attendance.png" alt="icon">
+      Attendance</a>
+    <a href="rules.html">
+      <img width="40" src="rules-icon.png" alt="icon">
+      Rules</a>
+    <a href="contact.html">
+      <img width="40" src="contact-icon.png" alt="icon">
+      Contact Leaders</a>
+  </nav>
+  
+  <main>
+    <nav class="admin-menu">
+      <a href="admin.html">Dashboard</a>
+      <a href="admin-view-applicants.html">View Applicants</a>
+      <a href="admin-add-chorister.html">Add Chorister</a>
+      <a href="admin-mark-attendance.html">Mark Attendance</a>
+      <a href="admin-view-attendance.html">View Attendance</a>
+      <a href="admin-view-choristers.html">View Choristers</a>
+    </nav>
+    <!-- Code for adding choristers -->
+    <section>
+      <form id="add-chorister-form">
+        <fieldset>
+          <legend>Add Chorister</legend>
+          <label for="user-name">Name</label>
+          <input placeholder="Type here" name="user-name" id="user-name" type="text" value="" required="true">
+          
+          <label for="group">Group</label>
+          <input placeholder="Type here" name="group" id="group" type="text" value="" required="true">
+          
+          <label for="district">District</label>
+          <input placeholder="Type here" name="district" id="district" type="text" value="" required="true">
+          
+          <label for="contact">Contact</label>
+          <input placeholder="Type here" name="contact" id="contact" type="tel" value="" required="true">
+          
+          <label for="instrument">Instrument</label>
+          <select name="instrument" id="instrument" required="true">
+            <option value="Select" selected>Select the instrument you play</option>
+            <option value="Keyboard(PIano)">Keyboard(PIano)</option>
+            <option value="Violin">Violin</option>
+            <option value="Viola">Viola</option>
+            <option value="Saxophone">Saxophone</option>
+            <option value="Clarenet">Clarenet</option>
+            <option value="Flute">Flute</option>
+            <option value="Trumpet">Trumpet</option>
+            <option value="Trumbone">Trumbone</option>
+            <option value="Euphonium">Euphonium</option>
+          </select>
+  
+          <label for="category">Category</label>
+          <select name="category" id="category" required="true">
+            <option value="">Select the category you belong</option>
+            <option value="Choir leader">Choir leader</option>
+            <option value="Choir member">Choir member</option>
+          </select>
+  
+          <label for="part">Parts</label>
+          <select name="part" id="part" required="true">
+            <option value="">Select the part you belong</option>
+            <option value="Treble">Treble</option>
+            <option value="Auto">Auto</option>
+            <option value="Tenor">Tenor</option>
+            <option value="Bass">Bass</option>
+          </select>
+        </fieldset>
+        <input type="submit" class="save-btn" value="Document Details">
+        <div class="message"></div>
+      </form>
+      <p class="message"></p>
+    </section>
+
+
+  </main>
+
+  <footer class="page-footer">
+    <div>
+      <div>&copy; DLSO Choir Benin-East Region Edo State Nigeria</div>
+      <div>Twenty Twenty Five</div>
+    </div>
+    <p>Achieving Heaven's Goal 
+      <img width="40" src="dlcm-logo.jpeg" alt="DCLM logo"> 
+      <img width="40" src="dlso-logo.jpg" alt="DLSO logo">
+    </p>
+  </footer>
+  
+  <script src="general.js"></script>
+  <script src="admin-add-chorister.js"></script>
+  
+</body>
+</html>

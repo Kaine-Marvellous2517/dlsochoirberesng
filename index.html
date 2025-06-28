@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DLSO Choir</title>
+  <link rel="shortcut icon" href="dlso-logo.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img width="40" class="logo" src="dlso-logo.jpg" alt="DLSO logo">
+  </header>
+  
+  <main>
+    <marquee class="title-image" behavior="alternate" direction="left">
+      <img width="100" src="choir-group-picture-02.jpg" alt="choir group picture">
+    </marquee>
+    <div class="title-image-div">
+      <header>
+        <h1>Welcome to DLSO Choir Benin-East Region Edo State Nigeria</h1>
+      </header>
+      <form id="admin-form"  class="admin-form" action="">
+        <!-- <label for="admin-email">Admin Email</label>
+        <input name="admin-email" id="admin-email" type="email" required>
+        <label for="admin-psw">Admin Password</label> -->
+        <input placeholder="Input password" name="admin-psw" id="admin-psw" type="password" required>
+        <input type="submit" value="Signin">
+      </form>
+      <form id="signin-form"  class="signin-form" action="">
+        <label for="signin">Signin As</label>
+        <select name="signin" id="signin" required>
+          <option value="Member">Choir Member</option>
+          <option value="Applicant">New Member</option>
+          <option value="Admin">Admin</option>
+        </select>
+        <input id="submit-btn" type="submit" value="Signin">
+      </form>
+      <div class="message"></div> 
+    </div>
+  </main>
+
+  <script>
+    let message = document.querySelector('.message');
+    let formValue = document.querySelector('#signin');
+    let submitBtn = document.querySelector('#submit-btn');
+    let adminForm = document.querySelector('#admin-form');
+    formValue.addEventListener('change', ()=>{
+      if (formValue.value === 'Admin') {
+      adminForm.style.display = 'flex';
+      submitBtn.style.display = 'none';
+      } else {
+        adminForm.style.display = 'none';
+        submitBtn.style.display = 'block';
+      }
+    })
+
+    adminForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      // let email = document.querySelector('#admin-email').value;
+      let psw = document.querySelector('#admin-psw').value;
+      message.innerHTML = '';
+      if (formValue.value === 'Admin') {
+        if (psw === '2517') {
+          message.innerHTML = 'Signin Successful &check;';
+          setTimeout(()=>{
+          window.location.href = 'admin.html'
+          }, 2000)
+        } else {
+          message.innerHTML = 'Incorrect password!';
+        }
+      }
+    })
+
+    let form = document.querySelector('#signin-form');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      message.innerHTML = '';
+      if (formValue.value !== 'Admin') {
+        message.innerHTML = 'Signin Successful &check;';
+        setTimeout(()=>{
+        window.location.href = 'home.html'
+        }, 2000)
+      }
+    })
+  </script>
+  
+</body>
+</html>

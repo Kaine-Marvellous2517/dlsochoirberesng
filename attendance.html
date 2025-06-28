@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="shortcut icon" href="dlso-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img width="40" class="logo" src="dlso-logo.jpg" alt="DLSO logo">
+    <nav>
+      <a href="home.html">Home</a> |
+      <a href="join-the-choir.html">Join The Choir</a> |
+      <a href="attendance.html">Attendance</a> |
+      <a href="rules.html">Rules</a> |
+      <a href="contact.html">Contact Leaders</a>
+    </nav>
+    <button class="menu-btn" type="button">&#9776;</button>
+  </header>
+  
+  <nav class="menu">
+    <a href="home.html">
+      <img width="40" src="home-icon.png" alt="icon">
+      Home</a>
+    <a href="join-the-choir.html">
+      <img width="40" src="join-choir-icon.png" alt="icon">
+      Join The Choir</a>
+    <a href="attendance.html">
+      <img width="40" src="attendance.png" alt="icon">
+      Attendance</a>
+    <a href="rules.html">
+      <img width="40" src="rules-icon.png" alt="icon">
+      Rules</a>
+    <a href="contact.html">
+      <img width="40" src="contact-icon.png" alt="icon">
+      Contact Leaders</a>
+  </nav>
+  
+  <main>
+    <!-- Code for displaying list of choristers -->
+    <div class="chorister-list">
+      <h3>Choristers Details</h3>
+      <span id="choristers-num"></span>
+    </div>
+    <!-- Filter chorister list by name -->
+    <section class="filter-box">
+      <label for="search-name">Filter Details</label>
+      <input placeholder="Search for name" type="search" name="search-name" id="search-name">
+    </section>
+    <section class="att-box chorister-list"></section>
+    <!-- Code for editing choristers details -->
+    <section class="modal" id="edit-details-box">
+      <div class="modal-content animate">
+        <span onclick="
+          document.querySelector('#edit-details-box').style.display = 'none'
+          document.querySelector('#edit-box').innerHTML = ''
+        " class="close-att">&times;</span>
+        <div id="edit-box"></div>
+      </div>
+    </section>
+    <!-- Code for choir attendance -->
+    <section>
+      <div class="attendance-btn">
+        <button class="view-btn" onclick="document.querySelector('.att-det-con').style.display = 'block'">
+          View Attendance
+        </button>
+      </div>
+      <div class="att-det-con">
+        <span onclick="document.querySelector('.att-det-con').style.display = 'none'" class="close-att">&times;</span>
+        <div class="filter-box">
+          <label for="search-attendance">Filter Attendance</label>
+          <input placeholder="E.g (yyyy-mm-dd)" type="search" name="search-attendance" id="search-attendance">
+        </div>
+        <div class="attendance-details"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div>
+      <div>&copy; DLSO Choir Benin-East Region Edo State Nigeria</div>
+      <div>Twenty Twenty Five</div>
+    </div>
+    <p>Achieving Heaven's Goal 
+      <img width="40" src="dlcm-logo.jpeg" alt="DCLM logo"> 
+      <img width="40" src="dlso-logo.jpg" alt="DLSO logo">
+    </p>
+  </footer>
+  
+  <script src="general.js"></script>
+  <script src="attendance.js"></script>
+  
+</body>
+</html>

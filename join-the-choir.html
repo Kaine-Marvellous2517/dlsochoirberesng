@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join The Choir</title>
+  <link rel="shortcut icon" href="dlso-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url(woman-checking-giant=checklist.jpg);
+      background-repeat: no-repeat;
+      background-size: 35%;
+      background-position-x: 90%;
+      background-position-y: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img width="40" class="logo" src="dlso-logo.jpg" alt="DLSO logo">
+    <nav>
+      <a href="home.html">Home</a> |
+      <a href="join-the-choir.html">Join The Choir</a> |
+      <a href="attendance.html">Attendance</a> |
+      <a href="rules.html">Rules</a> |
+      <a href="contact.html">Contact Leaders</a>
+    </nav>
+    <button class="menu-btn" type="button">&#9776;</button>
+  </header>
+  
+  <nav class="menu">
+    <a href="home.html">
+      <img width="40" src="home-icon.png" alt="icon">
+      Home</a>
+    <a href="join-the-choir.html">
+      <img width="40" src="join-choir-icon.png" alt="icon">
+      Join The Choir</a>
+    <a href="attendance.html">
+      <img width="40" src="attendance.png" alt="icon">
+      Attendance</a>
+    <a href="rules.html">
+      <img width="40" src="rules-icon.png" alt="icon">
+      Rules</a>
+    <a href="contact.html">
+      <img width="40" src="contact-icon.png" alt="icon">
+      Contact Leaders</a>
+  </nav>
+  
+  <main>
+    <section class="requirements">
+      <h2>Requirements</h2>
+      <div>
+        <p>To join this choir you must be:</p>
+        <ul>
+          <li>Born again
+            <ul>
+              <li>Must have repented from your sins</li>
+              <li>Accepted Jesus as your Lord and Saviour</li>
+              <li>Surrendered all to Him</li>
+            </ul>
+          </li>
+          <li>Disciplined
+            <ul>
+              <li>Able to meet up with the days of practice</li>
+              <li>Willing to go through rigorous training to make you a good singer</li>
+              <li>Not absent in church services</li>
+              <li>Reading your bible daily</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Code for choristers registeration -->
+    <section class="sign-up-container">
+      <span id="sign-up-valid">Use the button to register as a member</span>
+      <button onclick="document.getElementById('register-modal').style.display='block'" id="sign-up-btn">
+        <img width="40" src="join-choir-icon.png" alt="icon">
+      </button>
+    </section>
+    
+    <section class="modal" id="register-modal">
+      <div class="modal-content animate">
+        <span onclick="document.querySelector('#register-modal').style.display = 'none'" class="close-att">&times;</span>
+        <h1>Fill the form to join the choir</h1>
+        <h3>Be precise with your data documentation</h3>
+        <form id="join-choir-form" action="">
+          <fieldset class="box">
+            <legend>Identity</legend>
+            <div>
+              <label for="user-name">Full Name</label>
+              <input type="text" placeholder="Type here" name="user-name" id="user-name" required="true">
+            </div>
+            <div>
+              <label for="group">Group Name</label>
+              <input type="text" placeholder="Type here" name="group" id="group" required="true">
+            </div>
+            <div>
+              <label for="district">District Name</label>
+              <input type="text" placeholder="Type here" name="district" id="district" required="true">
+            </div>
+            <div>
+              <label for="contact">Phone Number</label>
+              <input type="tel" placeholder="Type here" name="contact" id="contact" required="true">
+            </div>
+          </fieldset>
+          
+          <fieldset class="box">
+            <legend>Spirituality</legend>
+            <div>
+              <label for="salvation">Are you born again?</label>
+              <span>
+                <select name="salvation" id="salvation" required="true">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                <input type="date" name="salvation-date" id="salvation-date" required="true">
+              </span>
+              <textarea placeholder="Share your experience" name="salvation-experience" id="salvation-experience" required="true">None to share.</textarea>
+            </div>
+            <div>
+              <label for="sanctification">Are you sanctified?</label>
+              <span>
+                <select name="sanctification" id="sanctification" required="true">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                <input type="date" name="sanctification-date" id="sanctification-date" required="true">
+              </span>
+              <textarea placeholder="Share your experience" name="sanctification-experience" id="sanctification-experience" required="true">None to share.</textarea>
+            </div>
+            <div>
+              <label for="spirit-filled">Are you spirit filled?</label>
+              <span>
+                <select name="spirit-filled" id="spirit-filled" required="true">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                <input type="date" name="spirit-filled-date" id="spirit-filled-date" required="true">
+              </span>
+              <textarea placeholder="Share your experience" name="spirit-filled-experience" id="spirit-filled-experience" required="true">None to share.</textarea>
+            </div>
+            <div>
+              <label for="quite-time">How often do you observe your quite time?</label>
+              <select name="quite-time" id="quite-time" required="true">
+                <option value="Frequently">Frequently</option>
+                <option value="Not frequently">Not frequently</option>
+                <option value="Once in a blue moon">Once in a blue moon</option>
+              </select>
+            </div>
+          </fieldset>
+          
+          <fieldset class="box">
+            <legend>The Choir</legend>
+            <div>
+              <label for="permit">Did your parents permit you joining the choir?</label>
+              <select name="permit" id="permit" required="true">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div>
+              <label for="reason">Why do you want to join the choir?</label>
+              <textarea placeholder="Type here" name="reason" id="reason" required="true"></textarea>
+            </div>
+            <div>
+              <label for="instrument">What instrument would you like to play?</label>
+              <select name="instrument" id="instrument" required="true">
+                <option value="Select" selected>Select instrument</option>
+                <option value="Keyboard(PIano)">Keyboard(PIano)</option>
+                <option value="Violin">Violin</option>
+                <option value="Viola">Viola</option>
+                <option value="Saxophone">Saxophone</option>
+                <option value="Clarenet">Clarenet</option>
+                <option value="Flute">Flute</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Trumbone">Trumbone</option>
+                <option value="Euphonium">Euphonium</option>
+              </select>
+            </div>
+          </fieldset>
+          <input type="submit" value="Submit Form">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div>
+      <div>&copy; DLSO Choir Benin-East Region Edo State Nigeria</div>
+      <div>Twenty Twenty Five</div>
+    </div>
+    <p>Achieving Heaven's Goal 
+      <img width="40" src="dlcm-logo.jpeg" alt="DCLM logo"> 
+      <img width="40" src="dlso-logo.jpg" alt="DLSO logo">
+    </p>
+  </footer>
+  
+  <script src="general.js"></script>
+  <script src="join-the-choir.js"></script>
+  
+</body>
+</html>
