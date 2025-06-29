@@ -242,8 +242,8 @@ if (choristerArray.length > 0) {
     }
   }
 
-  function deleteChoristerDetails(id, username) {
-    choristerIndex = choristerArray.findIndex((chorister) => chorister.id ===id);
+  function deleteChoristerDetails(userId, username) {
+    choristerIndex = choristerArray.findIndex((chorister) => chorister.userId ===userId);
     let password = '2517';
     const confirmDelete = prompt(`Input password to confirm the delete of "${username}" details`);
     if (confirmDelete === password) {
