@@ -63,9 +63,10 @@ input[type="submit"] {
   right: 0;
   bottom: 0;
   z-index: 49;
+  overflow: auto;
 }
 .menu a {
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -768,5 +769,6 @@ input[type="submit"] {
     gap: 20px;
   }
 }
+
 
 
