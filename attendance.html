@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="shortcut icon" href="dlso-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="h-box header">
+      <img width="40" class="logo" src="dlso-logo.jpg" alt="DLSO logo">
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="chorister.html">Choristers</a> 
+        <a href="attendance.html">Attendance</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-div" tabindex="0">
+        <button type="button">
+          <img src="hamburger-icon.png" alt="hamburger-icon" width="20">
+        </button>
+        <nav class="menu">
+          <p>Menu</p> <hr>
+          <a href="index.html">Home</a> <hr>
+        <a href="chorister.html">Choristers</a> <hr>
+          <a href="attendance.html">Attendance</a> <hr>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="h-box filter-box">
+      <div>
+        <h2>Attendance Details</h2>
+        <span id="attendance-num"></span>
+      </div>
+      <div class="filter-input-box">
+        <img src="filter-icon.png" alt="filter-icon" width="16">
+        <label for="search-attendance">Filter Attendance</label>
+        <input type="search" name="search-attendance" id="search-attendance" autocomplete="both" placeholder="Search for yyyy or mm or dd">
+      </div>
+    </div>
+
+    <div class="h-box admin-sect attendance-details">
+      <div class="empty-state">
+        <h3>No Attendance Yet</h3>
+        <p>Attentance will display here as they are been uploaded to the database.</p>
+      </div>
+    </div>
+
+    <div class="form-box mark-att">
+      <form class="add-att-form" action="">
+        <div>
+        <h2>Select names of choristers present during practice</h2>
+        <button class="close-btn" type="button">&times;</button>
+      </div>
+        <p>Be precise with your data documentation.</p>
+        <input type="date" name="practice-date" id="practice-date" autocomplete="both" required>
+        <div class="name-box"></div>
+        <input type="submit" value="Document">
+      </form>
+    </div>
+  </main>
+
+  <aside class="message-box"></aside>
+
+  <footer>
+    <div class="h-box footer">
+      <div> 
+        <img width="40" src="dlcm-logo.jpeg" alt="DCLM logo"> 
+        <img width="40" src="dlso-logo.jpg" alt="DLSO youth choir logo">
+      </div>
+      <div>
+        <p>&copy; DLSO Choir, Benin-East Region, Edo State Nigeria 2026</p>
+        <p>God's Own Choir</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="attendance.js"></script>
+  
+</body>
+</html>

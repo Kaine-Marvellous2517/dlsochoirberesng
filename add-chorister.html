@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin/Add Chorister</title>
+  <link rel="shortcut icon" href="dlso-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="h-box header">
+      <img width="40" class="logo" src="dlso-logo.jpg" alt="DLSO logo">
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="add-chorister.html">Add Choristers</a> | 
+        <a href="mark-attendance.html">Mark Attendance</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="add-mem-btn-1" type="button">Add Chorister</button>
+      <div class="menu-div" tabindex="0">
+        <button type="button">
+          <img src="hamburger-icon.png" alt="hamburger-icon" width="20">
+        </button>
+        <nav class="menu">
+          <p>Menu</p> <hr>
+          <a href="index.html">Home</a> <hr>
+        <a href="add-chorister.html">Add Choristers</a> <hr>
+          <a href="mark-attendance.html">Mark Attendance</a> <hr>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="h-box filter-box">
+      <div>
+        <h2>Choristers Details</h2>
+        <span id="choristers-num"></span>
+      </div>
+      <div class="filter-input-box">
+        <img src="filter-icon.png" alt="filter-icon" width="16">
+        <label for="filter-mem">Filter Choristers</label>
+        <select name="filter-mem" id="filter-mem">
+          <option value="">Select Filter</option>
+          <option value="name">Name</option>
+          <option value="group">Group</option>
+          <option value="district">District</option>
+          <option value="instrument">Instrument</option>
+          <option value="part">Part</option>
+        </select>
+        
+        <input type="search" name="search-name" id="search-name" autocomplete="both" placeholder="Search by name"></select>
+
+        <select name="search-group" id="search-group" autocomplete="both">
+          <option value="" selected>Search by group</option>
+          <option value="Ikpoba-central">Ikpoba-Central</option>
+        </select>
+
+        <select name="search-district" id="search-district" autocomplete="both">
+          <option value="" selected>Search by district</option>
+          <option value="Kojo">Kojo</option>
+        </select>
+
+        <select name="search-instrument" id="search-instrument" autocomplete="both">
+          <option value="" selected>Search by instrument</option>
+          <option value="Keyboard(PIano)">Keyboard(PIano)</option>
+          <option value="Violin">Violin</option>
+          <option value="Viola">Viola</option>
+          <option value="Saxophone">Saxophone</option>
+          <option value="Clarenet">Clarenet</option>
+          <option value="Flute">Flute</option>
+          <option value="Trumpet">Trumpet</option>
+          <option value="Trumbone">Trumbone</option>
+          <option value="Euphonium">Euphonium</option>
+        </select>
+
+        <select name="search-part" id="search-part" autocomplete="both">
+          <option value="">Search by part</option>
+          <option value="Treble">Treble</option>
+          <option value="Auto">Auto</option>
+          <option value="Tenor">Tenor</option>
+          <option value="Bass">Bass</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="h-box admin-sect chorister-details">
+      <div class="empty-state">
+        <h3>No Choristers Yet</h3>
+        <p>Start to document something today.</p>
+        <button class="add-mem-btn-2" type="button">Add Chorister</button>
+      </div>
+    </div>
+
+    <div class="form-box add-mem">
+      <form action="" id="add-chorister-form">
+        <div>
+          <h2>Add New Chorister</h2>
+          <button class="close-btn" type="button">&times;</button>
+        </div>
+
+        <label for="name">Name</label>
+        <input placeholder="Type here" name="name" id="name" type="text" autocomplete="both" required>
+
+        <label for="group">Group</label>
+        <select name="group" id="group"autocomplete="both" required>
+          <option value="" selected>Select the group you belong</option>
+          <option value="Ikpoba-central">Ikpoba-Central</option>
+        </select>
+          
+        <label for="district">District</label>
+        <select name="district" id="district"autocomplete="both" required>
+          <option value="" selected>Select the district you belong</option>
+          <option value="Kojo">Kojo</option>
+        </select>
+
+        <label for="contact">Contact</label>
+        <input placeholder="Type here" name="contact" id="contact" type="tel" autocomplete="both" required>
+        
+        <label for="instrument">Instrument</label>
+        <select name="instrument" id="instrument" autocomplete="both" required>
+          <option value="" selected>Select the instrument you play</option>
+          <option value="Keyboard(PIano)">Keyboard(PIano)</option>
+          <option value="Violin">Violin</option>
+          <option value="Viola">Viola</option>
+          <option value="Saxophone">Saxophone</option>
+          <option value="Clarenet">Clarenet</option>
+          <option value="Flute">Flute</option>
+          <option value="Trumpet">Trumpet</option>
+          <option value="Trumbone">Trumbone</option>
+          <option value="Euphonium">Euphonium</option>
+        </select>
+        
+        <label for="part">Parts</label>
+        <select name="part" id="part" autocomplete="both" required>
+          <option value="">Select the part you belong</option>
+          <option value="Treble">Treble</option>
+          <option value="Auto">Auto</option>
+          <option value="Tenor">Tenor</option>
+          <option value="Bass">Bass</option>
+        </select>
+        <input type="submit" value="Document">
+      </form>
+    </div>
+
+    <div class="form-box edit-box"></div>
+  </main>
+
+  <aside class="message-box">Successful!</aside>
+
+  <footer>
+    <div class="h-box footer">
+      <div> 
+        <img width="40" src="dlcm-logo.jpeg" alt="DCLM logo"> 
+        <img width="40" src="dlso-logo.jpg" alt="DLSO youth choir logo">
+      </div>
+      <div>
+        <p>&copy; DLSO Choir, Benin-East Region, Edo State Nigeria 2026</p>
+        <p>God's Own Choir</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- <script src="general.js"></script> -->
+  <script src="add-chorister.js"></script>
+  
+</body>
+</html>
